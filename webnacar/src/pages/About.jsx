@@ -74,12 +74,11 @@ const About = () => {
             <div>
               <h1 className="text-4xl font-bold mb-4">¡Bienvenido a nuestra página!</h1>
               <p className="text-xl mb-8">Regístrate ahora y empieza a disfrutar de nuestros servicios.</p>
-              <button className="px-6 py-3 bg-rosa text-white font-semibold rounded-lg hover:bg-arena "
-              href="/Inscripcion"
-              >
-                
-                Registrar
-              </button>
+            <Link to="/Inscripcion"
+            className="px-6 py-3 bg-primary text-white font-semibold rounded-lg hover:bg-rosa absolute bottom-6 "
+          >
+            Contactar
+          </Link>
             </div>
           </div>
         </div>
@@ -169,12 +168,11 @@ const About = () => {
       </p>
     </div>
     {/* Botón con posición absoluta */}
-    <a
-      href="/Inscripcion"
+    <Link to="/Inscripcion"
       className="px-6 py-3 bg-primary text-white font-semibold rounded-lg hover:bg-rosa absolute bottom-6 "
     >
       Contactar
-    </a>
+    </Link>
   </div>
 
 
@@ -189,12 +187,11 @@ const About = () => {
     <p className="text-base mb-8 text-center">
       Diseñamos eventos corporativos únicos para fortalecer tu equipo.
     </p>
-    <a
-      href="/Inscripcion"
+  <Link to="/Inscripcion"
       className="px-6 py-3 bg-primary text-white font-semibold rounded-lg hover:bg-rosa absolute bottom-6"
     >
       Contactar
-    </a>
+    </Link>
   </div>
 
   {/* Bloque 3: Urbanizaciones */}
@@ -208,12 +205,11 @@ const About = () => {
     <p className="text-base mb-8 text-center">
       Organizamos actividades especiales para urbanizaciones y comunidades.
     </p>
-    <a
-      href="/Inscripcion"
+    <Link to="/Inscripcion"
       className="px-6 py-3 bg-primary text-white font-semibold rounded-lg hover:bg-rosa absolute bottom-6"
     >
       Contactar
-    </a>                                              
+    </Link>                                              
   </div> 
   </div>
   </div>
@@ -267,12 +263,9 @@ const About = () => {
         Descubre todo lo que tenemos preparado para ti en nuestros campamentos y eventos personalizados. 
         Vive aventuras únicas en un entorno natural, perfecto para grupos, familias y empresas.
       </p>
-      <a
-        href="/Inscripcion"
+      <Link to="/Inscripcion"
         className="px-6 py-3 bg-rosa text-white font-semibold rounded-lg hover:bg-arena"
-      >
-        Ir a Contacto
-      </a>
+      > Ir a Contacto </Link>
     </div>
     </div>
   </div>
