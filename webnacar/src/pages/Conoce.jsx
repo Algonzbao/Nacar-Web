@@ -1,8 +1,8 @@
-import equipo from '../Utils/Equipo.png';
-import Carlota from '../Utils/Carlota.png';
-import Nacho from '../Utils/Nacho.png';
-import Random from '../Utils/Random.png';
-import fondoConchas from '../Utils/fill.png';
+import equipo from '../utils/Equipo.png';
+import Carlota from '../utils/Carlota.png';
+import Nacho from '../utils/Nacho.png';
+import Random from '../utils/Random.png';
+import fondoConchas from '../utils/fill.png';
 
 const Conoce = () => {
     return (
