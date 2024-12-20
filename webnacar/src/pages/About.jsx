@@ -119,9 +119,9 @@ const About = () => {
             <p className="text-lg mb-6">
             Ya sea que busques una aventura en la naturaleza o un evento privado en un entorno exclusivo, tenemos lo que necesitas para hacerlo especial.
             </p>
-            <a href="/eventos" className="px-6 py-3 text-white font-semibold rounded-lg bg-rosa hover:bg-arena">
+            <Link to="/Eventos" className="px-6 py-3 text-white font-semibold rounded-lg bg-rosa hover:bg-arena">
               Descubre nuestros eventos
-          </a>
+          </Link>
           </div>
 
           <div className="w-full lg:w-1/3 text-right">
