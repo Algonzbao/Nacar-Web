@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import logoNacar from '../Utils/logoBlanco.png';
+import logoNacar from '../utils/logoBlanco.png';
 
 function Nav() {
   return (

@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from 'react'; // Añadir estos imports
 import campamentoImagen from '../Utils/Campamento_Buendia.png';
 import logoNacar from '../Utils/LogoNacar.png';
 import pajaro from '../Utils/pájaro.png';

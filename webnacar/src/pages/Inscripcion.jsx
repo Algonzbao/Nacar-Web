@@ -1,5 +1,4 @@
 import fondoConchas from '../Utils/conchitas.png';
-import Footer from "../components/Footer";
 
 const Inscripcion = () => {
   return (

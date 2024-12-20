@@ -28,7 +28,6 @@ const Slider = () => {
   const [offset, setOffset] = useState(0);
 
   // Configuración del slider
-  const visibleImages = 5; // Número de imágenes visibles
   const imageWidth = 100; // Ancho de cada imagen (en píxeles)
   const spacing = 180; // Espaciado entre imágenes
   const totalWidth = imageWidth + spacing; // Ancho total por imagen con espaciado
