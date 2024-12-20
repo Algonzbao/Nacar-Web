@@ -1,4 +1,4 @@
-import fondoConchas from '../Utils/conchitas.png';
+import fondoConchas from '../utils/Conchitas.png';
 
 const Inscripcion = () => {
   return (
