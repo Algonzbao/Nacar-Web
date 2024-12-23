@@ -69,13 +69,15 @@ const Inscripcion = () => {
       </div>
 
       {/* Apartado de Formulario de Inscripción (Mitad Derecha) */}
-      <div className="lg:w-1/2 p-6 flex items-center mr-12">
+      <div className="lg:w-1/2 p-6 flex items-center justify-center">
         <div
-          className="w-full p-8 rounded-lg shadow-2xl"
+          className="w-full max-w-4xl p-8 rounded-lg shadow-2xl"  // Cambié max-w-lg a max-w-4xl
           style={{
             backgroundImage: `url(${fondoConchas})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
+            backgroundSize: 'cover',    // Asegura que el fondo cubra todo el contenedor
+            backgroundPosition: 'center', // Mantiene el fondo centrado
+            backgroundRepeat: 'no-repeat', // Evita que se repita el fondo
+            backgroundAttachment: 'fixed', // Para mantener el fondo fijo cuando se hace scroll
           }}
         >
           <h1 className="text-3xl font-bold mb-4 text-center">

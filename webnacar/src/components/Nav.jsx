@@ -66,15 +66,6 @@ function Nav() {
             </li>
             <li className="my-4">
               <Link 
-                to="/Inscripcion" 
-                className="block hover:bg-slate-800 py-2 rounded" 
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Contacto
-              </Link>
-            </li>
-            <li className="my-4">
-              <Link 
                 to="/Eventos" 
                 className="block hover:bg-slate-800 py-2 rounded" 
                 onClick={() => setIsMenuOpen(false)}
@@ -82,6 +73,16 @@ function Nav() {
                 Eventos
               </Link>
             </li>
+            <li className="my-4">
+              <Link 
+                to="/Inscripcion" 
+                className="block hover:bg-slate-800 py-2 rounded" 
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Contacto
+              </Link>
+            </li>
+
           </ul>
         </div>
       )}
