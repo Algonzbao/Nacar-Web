@@ -57,15 +57,6 @@ function Nav() {
           <ul className="text-xl">
             <li className="my-4">
               <Link 
-                to="/About" 
-                className="block hover:bg-slate-800 py-2 rounded" 
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Sobre
-              </Link>
-            </li>
-            <li className="my-4">
-              <Link 
                 to="/Conocenos" 
                 className="block hover:bg-slate-800 py-2 rounded" 
                 onClick={() => setIsMenuOpen(false)}
