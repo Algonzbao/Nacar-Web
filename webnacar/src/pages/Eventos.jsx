@@ -82,37 +82,44 @@ const ModalGallery = ({ isOpen, onClose, images }) => {
   return (
     <div
       className="fixed inset-0 bg-black bg-opacity-75 flex justify-center items-center z-50"
-      onClick={onClose} // Cierra el modal cuando se hace clic fuera del contenido
+      onClick={onClose} // Cierra el modal al hacer clic fuera del contenido
     >
-    <div className="bg-primary p-4 rounded-lg max-h-50 max-w-5xl w-full">
-      <div className="grid grid-cols-2 gap-4">
-        {images.map((image, index) => (
-          <img
-            key={index}
-            src={image}
-            alt={`Galería ${index}`}
-            className="object-fit-contain w-full h-auto max-h-100% rounded-md"
-          />
-        ))}
+      <div className="bg-primary p-4 rounded-lg w-full max-w-5xl max-h-screen flex justify-center items-center">
+        <div className="grid grid-cols-2 gap-4 w-full h-full">
+          {images.map((image, index) => (
+            <div
+              key={index}
+              className="w-full h-full flex justify-center items-center"
+              style={{ maxHeight: "50vh", maxWidth: "50vw" }}
+            >
+              <img
+                src={image}
+                alt={`Galería ${index}`}
+                className="object-contain w-full h-full rounded-md"
+              />
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
     </div>
   );
 };
+
 
 const Eventos = () => {
   const [selectedGallery, setSelectedGallery] = useState(null);
 
   return (
     <div>
+      {/* Sección del encabezado */}
       <div
-        className="flex flex-col lg:flex-row items-center justify-center px-6 h-[42vh] bg-cover bg-center bg-no-repeat"
+        className="flex flex-col lg:flex-row items-center justify-center px-6 py-12 min-h-[40vh] bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage: `url(${contorno})`,
         }}
       >
-        <div className="lg:w-1/2 text-center lg:text-left mb-6 lg:mb-0 p-4">
-          <h1 className="text-6xl font-bold text-gray-800 mb-4 text-center">
+      <div className="max-w-3xl text-center p-4">
+      <h1 className="text-5xl lg:text-6xl font-bold text-gray-800 mb-4">
             Estos son los eventos que preparamos en NACAR
           </h1>
           <p className="text-lg text-gray-700">
@@ -123,53 +130,46 @@ const Eventos = () => {
         </div>
       </div>
 
-      {/* Texto descriptivo */}
-      <div className="flex relative bg-primary text-white py-6 px-12 lg:px-16">
-      <div className="flex justify-between items-center max-w-screen-xl mx-auto mb-24">
-            {/* Contenedor de texto */}
-            <div className="w-full lg:w-1/2 text-left mt-4">
-              <h3 className="text-3xl font-bold mb-4">Cómo es un día de campa</h3>
-              <ul className="list-disc ml-6 mb-6">
-                <li className="text mb-2">1 monitor por cada 10 niños: Garantizamos supervisión y atención personalizada.</li>
-                <li className="text mb-2">Actividades diseñadas a medida: Adaptamos cada actividad a las necesidades de los participantes.</li>
-                <li className="text mb-2">Horarios flexibles: Pensados para facilitar la conciliación de las familias.</li>
-                <li className="text mb-2">
-                  Espacios y recursos: Llevamos a cabo actividades en instalaciones municipales, centros educativos o espacios
-                  cedidos por el AMPA o Ayuntamiento, adaptando materiales al entorno.
-                </li>
-                <li className="text mb-2">
-                  Equipo profesional y cualificado: Contamos con monitores especializados en educación, deporte y ocio infantil, garantizando un entorno seguro, dinámico y enriquecedor para todos los participantes.
-                </li>
-              </ul>
-              <h4 className="text-2xl font-bold mb-4">Beneficios para AMPAs y Ayuntamientos</h4>
-              <ul className="list-disc ml-6">
-                <li className="text mb-2">
-                  Facilitación de la conciliación: Un recurso práctico para las familias durante periodos vacacionales.
-                </li>
-                <li className="text mb-2">Proximidad: Actividades organizadas en el propio municipio o entorno escolar.</li>
-                <li className="text mb-2">
-                  Fomento de valores: Promovemos respeto, igualdad y convivencia en cada actividad.
-                </li>
-                <li className="text mb-2">
-                  Gestión integral: Nos encargamos de toda la organización, desde la planificación hasta la ejecución.
-                </li>
-              </ul>
-            </div>
-          <div className="w-full lg:w-1/2 text-right">
-            <img src={mural} alt="Logo" className="ml-28 h-100 rounded-lg w-auto mx-auto items-center justify-center" />
+      {/* Sección descriptiva */}
+      <div className="bg-primary text-white py-6 px-4 lg:px-16">
+        <div className="max-w-screen-xl mx-auto flex flex-col lg:flex-row justify-between items-center">
+          {/* Texto */}
+          <div className="w-full lg:w-1/2 text-left mt-4 px-4">
+            <h3 className="text-3xl font-bold mb-4">Cómo es un día de campa</h3>
+            <ul className="list-disc ml-6 mb-6">
+              <li className="mb-2">1 monitor por cada 10 niños: Garantizamos supervisión y atención personalizada.</li>
+              <li className="mb-2">Actividades diseñadas a medida: Adaptamos cada actividad a las necesidades de los participantes.</li>
+              <li className="mb-2">Horarios flexibles: Pensados para facilitar la conciliación de las familias.</li>
+              <li className="mb-2">
+                Espacios y recursos: Llevamos a cabo actividades en instalaciones municipales, centros educativos o espacios
+                cedidos por el AMPA o Ayuntamiento, adaptando materiales al entorno.
+              </li>
+              <li className="mb-2">
+                Equipo profesional y cualificado: Contamos con monitores especializados en educación, deporte y ocio infantil.
+              </li>
+            </ul>
+            <h4 className="text-2xl font-bold mb-4">Beneficios para AMPAs y Ayuntamientos</h4>
+            <ul className="list-disc ml-6">
+              <li className="mb-2">
+                Facilitación de la conciliación: Un recurso práctico para las familias durante periodos vacacionales.
+              </li>
+              <li className="mb-2">Proximidad: Actividades organizadas en el propio municipio o entorno escolar.</li>
+              <li className="mb-2">Fomento de valores: Promovemos respeto, igualdad y convivencia en cada actividad.</li>
+              <li className="mb-2">
+                Gestión integral: Nos encargamos de toda la organización, desde la planificación hasta la ejecución.
+              </li>
+            </ul>
+          </div>
+
+          {/* Imagen */}
+          <div className="w-full lg:w-1/2 mt-6 lg:mt-0 px-4">
+            <img src={mural} alt="Logo" className="h-auto max-w-full rounded-lg" />
           </div>
         </div>
       </div>
 
-        {/* Tarjetas en formato 3x2 */}
-        <div>
-<div
-  className="flex flex-col lg:flex-row items-center justify-center px-6 h-[12vh]">
-  <h1 className="text-5xl font-bold text-gray-800 mb-4 text-center mt-8">
-    Nuestras Actividades
-  </h1>
-</div>
-      <div className="flex flex-col items-center justify-center bg-white text-black py-12 px-6 lg:px-2 mb-24">
+      {/* Tarjetas de actividades */}
+      <div className="bg-white text-black py-12 px-4 lg:px-16">
         <ModalGallery
           isOpen={!!selectedGallery}
           onClose={() => setSelectedGallery(null)}
@@ -177,20 +177,18 @@ const Eventos = () => {
         />
 
         {/* Contenedor de las tarjetas */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 w-full max-w-screen-xl">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-screen-xl mx-auto">
           {eventosData.map((evento, index) => {
-            // Determinar el color de fondo y del texto dependiendo del índice
             const isEven = index % 2 === 0;
-            const cardClass = isEven 
-              ? "flex flex-col items-center p-8 rounded-lg shadow-lg bg-arena text-white" 
+            const cardClass = isEven
+              ? "flex flex-col items-center p-8 rounded-lg shadow-lg bg-arena text-white"
               : "flex flex-col items-center p-8 rounded-lg shadow-lg bg-white text-arena";
 
-            // Definir el color del ícono dependiendo del color de fondo
             const iconColorClass = isEven ? "text-white" : "text-arena";
 
             return (
               <div key={evento.id} className={cardClass}>
-                <div 
+                <div
                   className="border-4 border-primary overflow-hidden cursor-pointer"
                   onClick={() => setSelectedGallery(evento.gallery)}
                 >
@@ -209,9 +207,9 @@ const Eventos = () => {
           })}
         </div>
       </div>
-        </div>
-        </div>
+    </div>
   );
 };
 
 export default Eventos;
+
